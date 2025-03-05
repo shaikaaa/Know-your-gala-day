@@ -1,0 +1,231 @@
+
+*{
+   overflow: auto;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* to hide scroll bar but to be able to scroll in chrome and safari */
+::-webkit-scrollbar {
+    display: none;
+}
+
+.image_background {
+    width: 100%;
+    height: 600px;
+    
+    background-image: url(img2.JPG);
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-size: cover; /* Makes sure the image covers the entire area */
+    background-position: center;
+    z-index: -1;
+    position:absolute
+    
+}
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+}
+.henny-penny-regular {
+    font-family: "Henny Penny", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .gochi-hand-regular {
+    font-family: "Gochi Hand", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+.country_Selection{
+    margin-top: 50px;
+    margin-left: 700px;
+    visibility: hidden;
+     transform: translateY(200px); /*PAILA CHAI 200PX TALA LUKERA BAS */
+    transition: transform 0.8s ease-out; /*0.8s ma bistarai bistarai transform gar mathi aauna lai posiiton */
+    position: relative;
+}
+.country_Selection.allow{
+    visibility: visible;
+    transform: translateY(0);  /*y(0) yo chai tesko original pos ho, so visible huda chai tya samma pug ani rokki */
+    position: relative;
+}
+.where_you_at{
+    z-index: 3;
+    position: relative;
+    margin-left: 110px;
+    margin-top: 70px;
+    overflow: hidden;
+}
+.where_you_at.hide{
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    
+}
+.globe{
+    height: 100px;
+    width: 100px;
+    z-index: 3;
+    position: relative;
+    margin-left: 170px;
+    overflow: hidden;
+    
+
+}
+
+.globe.hide{
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    
+}
+.country_dropdown{
+    visibility: hidden;
+    opacity: 0;
+}
+.country_dropdown.show{
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    z-index: 4;
+    margin-top: -150px;
+    margin-left: 100px;
+    transition: opacity 0.5s ease-in-out;
+    height: 18.65rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:baseline;
+    align-items:baseline;
+    
+}
+.country_dropdown img{
+    margin-top: 50px;
+    position: absolute;
+    margin-left: 7rem;
+    width: 50px;
+    height: 50px;
+}
+.country_dropdown select{
+    width : 300px;
+    height: 30px;
+    border-radius: 7px;
+    padding-left: 7rem;
+    margin-top: 65px;
+    
+}
+
+.choose_date{
+    visibility: hidden;
+    opacity: 0;
+}
+.choose_date.show{
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: baseline;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    gap: 10px;
+    margin-top: -8rem;
+    height: 11.56rem;
+    position: relative;
+    z-index: 15;
+    
+}
+input[type="date"]{
+    padding-left: 7rem;
+    border-radius: 7px;
+    width : 185px;
+    height: 30px;
+    border: none;
+}
+
+
+.contact_info{
+    /* background-color: #fff0e1;  */
+    background-image: url(sandimg.JPG);
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-size: cover; /* Makes sure the image covers the entire area */
+    height: 6rem;
+    position: relative;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    gap:30px;
+    z-index: 15;
+    
+}
+
+
+.info{
+    pointer-events: auto;
+    width: 35px;
+    height: 35px;
+}
+.email{
+    margin-top: 40px;
+    pointer-events: auto;
+    width: 35px;
+    height: 35px;
+}
+.me{
+    margin-top: 40px;
+    pointer-events: auto;
+    width: 35px;
+    height: 35px;
+}
+
+.info_img p{
+    visibility: hidden;
+    opacity: 0;
+}
+.info_img p.show{
+   visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    white-space: wrap;
+}
+
+.email_img p{
+    visibility: hidden;
+    opacity: 0;
+}
+.email_img p.show{
+   visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.me_img p{
+    visibility: hidden;
+    opacity: 0;
+}
+.me_img p.show{
+   visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.outputdiv{
+visibility: hidden;   
+ opacity: 0;
+}
+
+.outputdiv.show {
+visibility: visible;   
+ opacity: 1;
+ z-index:17;
+ color: #ff84d0;
+ font-family: 'Gochi Hand', sans-serif;
+ font-size: 40px;
+ position: fixed; 
+ top: 50%;
+ left: 60%;
+ text-align: center;
+ white-space: normal;
+}
